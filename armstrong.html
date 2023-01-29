@@ -1,0 +1,31 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+var num=372,digits=0;
+var sum=0;
+temp=num;
+while(num!=0)
+{
+num=parseInt(num/10);
+digits++;
+}
+num=temp;
+while(num>0)
+{
+rem=num%10;
+sum=sum+Math.pow(rem,digits);
+num=parseInt(num/10);
+}
+if(sum==temp)
+{
+document.write(temp+ "is armstrong")
+}
+else
+{
+document.write(temp+ "is  not armstrong")
+}
+</script>
+</body>
+</html>
