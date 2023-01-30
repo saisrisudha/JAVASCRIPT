@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<script>
+var num=2122,temp,sum=0;
+temp=num;
+while(num!=0)
+{
+rem=num%10;
+sum=sum*10+rem;
+num=parseInt(num/10)
+}
+if(sum==temp)
+{
+document.write(temp+"palindrome");
+}
+else{
+document.write(temp+"not palindrome");
+}
+
+</script>
+</html>
