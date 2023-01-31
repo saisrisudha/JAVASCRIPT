@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FD Calculator</title>
+    <style>
+        .color{
+            width: 500px;
+            background-color: palegoldenrod;
+            border:1px solid black;
+            padding:50px;
+            text-align: center;
+            margin-left:500px;
+            margin-top:110px;
+        }
+        .state{
+            margin-left:550px;
+            margin-top:110px;
+        }
+        .btn{
+            background-color: green;
+            margin-left:100px;
+        
+        }
+        .btn1{
+            background-color: red;
+            margin-left:150px;
+        }
+        .head{
+            margin-bottom:35px;
+        }
+        </style>
+</head>
+<body>
+    <div class="color">
+    <h1 class="head">Fixed Deposite Calculator</h1>
+    <label>Name</label>
+    <input type="text"id="Name">
+    <br><br>
+    <label>amount</label>
+    <input type="text"id="amount">
+    <br><br>
+    <label>Term</label>
+    <input type="number"id="Term">
+    <br><br>
+    <label>YOB</label>
+    <input type="text"id="YOB">
+    <br><br>
+    <table>
+    <tr>
+    <th><button class="btn" onclick="username()">Sumbit</button></th>
+    <th><button class="btn1" >Cancle</button></th>
+    </tr> 
+    </table>
+    </div>
+    <br>
+    <label class="state" id="result">Statment:</label>
+
+<script>
+    function username(){
+        var person=document.getElementById("Name").value
+        var amount=parseInt(document.getElementById("amount").value)
+        var Year=document.getElementById("YOB").value
+        var term=parseInt(document.getElementById("Term").value)
+        var parage=parseInt(2023-Year);
+     var rate;
+    if(parage<40)
+    {
+        rate=5;
+    }
+    else if(parage>40 && parage<60)
+    {
+        rate=6;
+    }
+    else if(age>60)
+    {
+         rate=8;
+    }
+    console.log(parage,term,amount,rate)
+var interest=parseInt((amount*term*rate)/100)
+var total=parseInt(amount+interest)
+document.getElementById("result").innerHTML="your rate of interest is "+total+person;
+    }  
+      
+</script>
+</body>
+</html>
